@@ -649,6 +649,11 @@ globrex@^0.1.2:
   resolved "https://registry.yarnpkg.com/globrex/-/globrex-0.1.2.tgz#dd5d9ec826232730cd6793a5e33a9302985e6098"
   integrity sha512-uHJgbwAMwNFf5mLst7IWLNg14x1CkeqglJb/K3doi4dw6q2IvAAmM/Y81kevy83wP+Sst+nutFTYOGg3d1lsxg==
 
+hamburger-react@^2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/hamburger-react/-/hamburger-react-2.5.0.tgz#7c0148af8f02f3b693564d69e590d02db8ffc221"
+  integrity sha512-5GSXe+ucxTPJ0SkhIsPQ/PRDweZPIKya1lfahAuExx31SdheeUA4uOPfQIAirbKona8hvo79VDr5LJQzPXsdpw==
+
 has-flag@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-3.0.0.tgz#b5d454dc2199ae225699f3467e5a07f3b955bafd"
