@@ -15,6 +15,11 @@ export const GlobalStyles = createGlobalStyle`
     --raleway: 'Raleway', sans-serif;
   }
 
+  body {
+    background-image: ${({ theme }) => theme.gradient};
+    background-repeat: no-repeat;
+  }
+
   p {
     font-size: 1.25rem;
   }

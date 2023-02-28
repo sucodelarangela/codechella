@@ -5,6 +5,7 @@ import { boreal, summer } from "styles/themes";
 import { GlobalStyles } from "styles/globalStyles";
 import { Header } from "components/Header";
 import { Banner } from "components/Banner";
+import { Home } from "pages/Home";
 
 function App() {
   const [theme, setTheme] = useState(true);
@@ -15,6 +16,7 @@ function App() {
       <Router>
         <Header theme={theme} setTheme={setTheme} />
         <Banner theme={theme} />
+        <Home theme={theme} />
       </Router>
     </ThemeProvider>
   );

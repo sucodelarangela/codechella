@@ -8,7 +8,6 @@ import summerHome from 'assets/summer-home.jpg';
 export const Banner = ({ theme }) => {
   const { pathname } = useLocation();
   const [banner, setBanner] = useState(borealHome);
-  console.log(banner);
 
   useEffect(() => {
     if (pathname === '/' && theme) {
