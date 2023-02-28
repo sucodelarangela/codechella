@@ -4,7 +4,8 @@ export const boreal = {
   primaryBlue: '#4650BD',
   secondary: '#304968',
   lightGreen: '#36C1A0',
-  lightBlue: '#B6BCFF'
+  lightBlue: '#B6BCFF',
+  textColor: '#FFF'
 };
 
 export const summer = {
@@ -13,6 +14,7 @@ export const summer = {
   primaryBlue: '#2E7BA2',
   secondary: '#C8DEEF',
   lightGreen: '#FBF0DD',
-  lightBlue: '#FACF9D'
+  lightBlue: '#FACF9D',
+  textColor: '#444'
 };
 

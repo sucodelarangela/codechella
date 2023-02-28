@@ -6,7 +6,8 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-family: var(--raleway);
-  }  
+    color: ${({ theme }) => theme.textColor}
+  }
   
   :root {
     /* Fonts */
