@@ -18,6 +18,7 @@ export const Header = styled.header`
     position: absolute;
     top: 8rem;
     right: 0;
+    z-index: 10;
     & ul {
       list-style: none;
       text-align: center;

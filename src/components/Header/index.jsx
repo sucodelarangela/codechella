@@ -8,8 +8,6 @@ import logo from 'assets/logo.png';
 export const Header = ({ theme, setTheme }) => {
   const [isOpen, setOpen] = useState(false);
 
-  console.log(theme);
-
   return (
     <S.Header>
       <img src={logo} alt="CodeChella, música para devs!" />
