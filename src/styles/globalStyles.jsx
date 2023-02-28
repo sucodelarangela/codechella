@@ -6,7 +6,8 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-family: var(--raleway);
-    color: ${({ theme }) => theme.textColor}
+    color: ${({ theme }) => theme.textColor};
+    transition: 0.3s;
   }
   
   :root {
@@ -20,7 +21,15 @@ export const GlobalStyles = createGlobalStyle`
     background-repeat: no-repeat;
   }
 
+  a, button {
+    cursor: pointer;
+  }
+
   p {
     font-size: 1.25rem;
+  }
+
+  .container {
+    padding: 1.5rem;
   }
 `;

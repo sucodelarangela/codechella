@@ -6,13 +6,13 @@ export const BasicSection = styled.section`
   justify-content: center;
   gap: 1.5rem;
   text-align: center;
-  padding: 1.5rem;
+  margin-bottom: 1.5rem;
   & img {
     border-radius: 1rem;
     object-fit: cover;
     height: 23.75rem;
     margin-bottom: 0.5rem;
-    width: 100%;
+    /* width: 100%; */
   }
   & h2 {
     font-size: 2rem;

@@ -5,6 +5,7 @@ export const boreal = {
   secondary: '#304968',
   lightGreen: '#36C1A0',
   lightBlue: '#B6BCFF',
+  buttonHover: '#606ADA',
   textColor: '#FFF'
 };
 
@@ -15,6 +16,7 @@ export const summer = {
   secondary: '#C8DEEF',
   lightGreen: '#FBF0DD',
   lightBlue: '#FACF9D',
+  buttonHover: '#519EC5',
   textColor: '#444'
 };
 
