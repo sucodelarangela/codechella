@@ -12,7 +12,7 @@ export const Button = styled.button`
   font-size: 1.25rem;
   font-weight: 700;
   gap: 1rem;
-  margin: 0 auto;
+  margin: 0 auto 2rem;
   padding: 1rem;
   &.wide {
     width: 100%

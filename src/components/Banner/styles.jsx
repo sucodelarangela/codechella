@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Banner = styled.section`
   display: flex;
   align-items: center;
+  justify-content: center;
   text-align: center;
   height: 16.875rem;
   width: 100%;
