@@ -11,6 +11,7 @@ export const LineUp = styled.section`
     align-items: center;
     justify-content: center;
     background: ${({ theme }) => theme.primaryGreen};
+    color: #FFF;
     font-family: var(--calistoga);
     font-size: 2rem;
     font-weight: 400;
