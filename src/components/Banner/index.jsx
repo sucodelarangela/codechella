@@ -19,7 +19,7 @@ export const Banner = ({ theme }) => {
 
   return (
     <S.Banner banner={banner}>
-      <h2>Boas vindas ao #CodeChella2023!</h2>
-    </S.Banner>
+      <h2>Boas vindas ao<br />#CodeChella2023!</h2>
+    </S.Banner >
   );
 };

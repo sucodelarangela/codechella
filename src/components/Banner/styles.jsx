@@ -22,4 +22,13 @@ export const Banner = styled.section`
     font-family: var(--calistoga);
     font-size: 2rem;
   }
+  @media screen and (min-width: 768px) {
+    height: 24rem;
+    & h2 {
+      font-size: 4rem;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    height: 25rem;
+  }
 `;
