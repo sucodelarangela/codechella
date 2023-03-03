@@ -11,7 +11,15 @@ export const Header = ({ theme, setTheme }) => {
   return (
     <S.Header>
       <img src={logo} alt="CodeChella, música para devs!" />
-      <Hamburger toggled={isOpen} toggle={setOpen} size={32} color='#FFF' />
+      <Hamburger
+        id='menu-icon'
+        color='#FFF'
+        easing='ease-in'
+        label='Abrir menu de navegação'
+        size={32}
+        toggled={isOpen}
+        toggle={setOpen}
+      />
       {isOpen && (
         <nav>
           <ul>
@@ -23,6 +31,15 @@ export const Header = ({ theme, setTheme }) => {
           </ul>
         </nav>
       )}
+      <nav className='nav'>
+        <ul>
+          <li>A Experiência</li>
+          <li>Mapa de Setores</li>
+          <li>Informações</li>
+          <li>Ingresso</li>
+          <li onClick={() => setTheme(!theme)}>Tema: {theme ? 'Boreal' : 'Summer'}</li>
+        </ul>
+      </nav>
     </S.Header>
   );
 };

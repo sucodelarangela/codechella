@@ -8,6 +8,7 @@ export const GlobalStyles = createGlobalStyle`
     font-family: var(--raleway);
     color: ${({ theme }) => theme.textColor};
     transition: 0.3s;
+    list-style: none;
   }
   
   :root {
