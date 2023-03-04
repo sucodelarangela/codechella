@@ -15,12 +15,14 @@ export const Footer = ({ theme }) => {
     <S.Footer invert={invert}>
       <div className='social'>
         <img src={logo} alt="CodeChella, música para devs!" />
-        <p>Acesse nossas redes:</p>
         <div>
-          <FaWhatsapp size={32} />
-          <FaTwitch size={32} />
-          <FaInstagram size={32} />
-          <FaTwitter size={32} />
+          <p>Acesse nossas redes:</p>
+          <div>
+            <FaWhatsapp size={32} />
+            <FaTwitch size={32} />
+            <FaInstagram size={32} />
+            <FaTwitter size={32} />
+          </div>
         </div>
       </div>
       <p>Desenvolvido por Angela Caldas. Design by Alura. Projeto fictício sem fins comerciais.</p>
