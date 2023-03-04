@@ -11,6 +11,8 @@ export const Footer = ({ theme }) => {
     theme ? setInvert('0%') : setInvert('75%');
   }, [theme]);
 
+  console.log(invert);
+
   return (
     <S.Footer invert={invert}>
       <div className='social'>

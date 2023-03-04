@@ -11,13 +11,13 @@ export const Footer = styled.footer`
     align-items: center;
     flex-direction: column;
     gap: 1rem;
+    & img {
+      filter: invert(${(props) => props.invert});
+      width: 14rem;
+    }
     & > div {
       display: flex;
       flex-direction: column;
-      & img {
-        filter: invert(${(props) => props.invert});
-        width: 14rem;
-      }
       & p {
         font-size: 1.25rem;
         font-weight: 500;
