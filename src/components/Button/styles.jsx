@@ -14,13 +14,14 @@ export const Button = styled.button`
   gap: 1rem;
   margin: 0 auto 2rem;
   padding: 1rem;
-  &.wide {
-    width: 100%
-  }
+  width: 100%;
   & svg {
     fill: #FFF;
   }
   &:hover {
     background-color: ${({ theme }) => theme.buttonHover};
+  }
+  @media screen and (min-width: 768px) {
+      width: fit-content;
   }
 `;

@@ -38,10 +38,10 @@ export const Home = ({ theme }) => {
         <BasicSection
           src={img.img1}
           alt={img.alt1}
-          title='&lt; 11 e 12 de Março &gt;&nbsp; Aluródromo de São Paulo'
+          title={`< 11 e 12 de Março >\r\nAluródromo de São Paulo`}
           text='Hora de programar nossa memória com novas lembranças! Uma nova experiência sobre música, linguagens e, claro, tecnologia! Somos um festival diverso, com vários artistas e referências. Divirta-se!'
         />
-        <Button wide='wide'>Comprar ingresso!<MdLocalActivity size={32} /></Button>
+        <Button>Comprar ingresso!<MdLocalActivity size={32} /></Button>
         <S.Title>/Line-Up/</S.Title>
         <LineUp lineup={lineups.lineup1} />
         <LineUp lineup={lineups.lineup2} />

@@ -1,7 +1,7 @@
 import * as S from './styles';
 
-export const Button = ({ children, wide }) => {
+export const Button = ({ children }) => {
   return (
-    <S.Button className={wide}>{children}</S.Button>
+    <S.Button>{children}</S.Button>
   );
 };

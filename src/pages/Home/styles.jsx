@@ -7,6 +7,9 @@ const Title = styled.h2`
   margin: 2rem 0;
   text-align: center;
   width: 100%;
+  @media screen and (min-width: 768px) {
+    font-size: 4rem;
+  }
 `;
 
 const Image = styled.img`

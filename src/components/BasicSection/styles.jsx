@@ -7,6 +7,7 @@ export const BasicSection = styled.section`
   gap: 1.5rem;
   text-align: center;
   margin-bottom: 1.5rem;
+  white-space: pre-line;
   & img {
     border-radius: 1rem;
     object-fit: cover;
