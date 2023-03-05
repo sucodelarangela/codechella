@@ -9,6 +9,8 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.textColor};
     transition: 0.3s;
     list-style: none;
+    scrollbar-width: thin;
+    scrollbar-color: ${({ theme }) => theme.primaryBlue} ${({ theme }) => theme.lightBlue};
   }
   
   :root {
@@ -20,6 +22,15 @@ export const GlobalStyles = createGlobalStyle`
   body {
     background-image: ${({ theme }) => theme.gradient};
     background-repeat: no-repeat;
+  }
+
+  body::-webkit-scrollbar {
+    background: ${({ theme }) => theme.lightBlue};
+    width: 8px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background: ${({ theme }) => theme.primaryBlue};
   }
 
   a, button {
@@ -40,6 +51,11 @@ export const GlobalStyles = createGlobalStyle`
       margin: 0 auto;
       max-width: 1280px;
       padding: 2rem 3.75rem;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    .container {
+      padding: 2rem 0;
     }
   }
 `;

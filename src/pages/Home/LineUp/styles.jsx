@@ -52,6 +52,7 @@ export const LineUp = styled.section`
         content: "";
         position: absolute;
         height: 1px;
+        /* width: calc(half of viewport - half the h2 width - page margins - distance from line to h2) */
         width: calc(50vw - 50% - 60px - 2rem);
         background: ${({ theme }) => theme.primaryGreen};
         right: calc(100% + 2rem);
