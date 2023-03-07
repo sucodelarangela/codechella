@@ -47,20 +47,20 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   .container {
-    padding: 1.5rem;
+    padding: 0 1.5rem;
   }
 
   @media screen and (min-width: 768px) {
     .container {
       display: block;
       margin: 0 auto;
+      padding: 0 3.75rem;
       max-width: 1280px;
-      padding: 2rem 3.75rem;
     }
   }
   @media screen and (min-width: 1280px) {
     .container {
-      padding: 2rem 0;
+      padding: 0;
     }
   }
 `;

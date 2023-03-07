@@ -5,7 +5,7 @@ export const BasicSection = styled.section`
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  margin-bottom: 1.5rem;
+  padding: 2rem 0;
   white-space: pre-line;
   & div {
     display: flex;
@@ -32,6 +32,15 @@ export const BasicSection = styled.section`
   @media screen and (min-width: 1280px) {
     flex-direction: row;
     gap: 3rem;
+    padding: 4rem 0;
+    max-width: 1280px;
+    &.experience {
+    text-align: left;
+      &:nth-of-type(2) {
+        flex-direction: row-reverse;
+        text-align: right;
+      }
+    }
     & img {
       min-width: 38rem;
     }
