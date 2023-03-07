@@ -16,8 +16,8 @@ function App() {
   return (
     <ThemeProvider theme={theme ? boreal : summer}>
       <GlobalStyles />
-      <Header theme={theme} setTheme={setTheme} />
       <Router>
+        <Header theme={theme} setTheme={setTheme} />
         <BannerProvider>
           <Banner theme={theme} />
         </BannerProvider>

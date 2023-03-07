@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import { Sling as Hamburger } from 'hamburger-react';
 
 import * as S from './styles';
@@ -10,7 +11,9 @@ export const Header = ({ theme, setTheme }) => {
 
   return (
     <S.Header>
-      <img src={logo} alt="CodeChella, música para devs!" />
+      <NavLink to='/'>
+        <img src={logo} alt="CodeChella, música para devs!" />
+      </NavLink>
       <Hamburger
         id='menu-icon'
         color='#FFF'
@@ -23,7 +26,7 @@ export const Header = ({ theme, setTheme }) => {
       {isOpen && (
         <nav>
           <ul>
-            <li>A Experiência</li>
+            <li><NavLink to='/experience'>A Experiência</NavLink></li>
             <li>Mapa de Setores</li>
             <li>Informações</li>
             <li>Ingresso</li>
@@ -33,7 +36,7 @@ export const Header = ({ theme, setTheme }) => {
       )}
       <nav className='nav'>
         <ul>
-          <li>A Experiência</li>
+          <li><NavLink to='/experience'>A Experiência</NavLink></li>
           <li>Mapa de Setores</li>
           <li>Informações</li>
           <li>Ingresso</li>

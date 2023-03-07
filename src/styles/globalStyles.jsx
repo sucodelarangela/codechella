@@ -33,6 +33,10 @@ export const GlobalStyles = createGlobalStyle`
     background: ${({ theme }) => theme.primaryBlue};
   }
 
+  a {
+    text-decoration: none;
+  }
+
   a, button {
     cursor: pointer;
   }

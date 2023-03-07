@@ -5,6 +5,8 @@ export const Footer = styled.footer`
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  /* VERIFICAR COR DO FOOTER DE ACORDO COM O TEMA */
+  background: ${props => props.themeStatus ? props.theme.primaryBlue : props.theme.lightBlue};
   padding: 1.5rem;
   & .social {
     display: flex;

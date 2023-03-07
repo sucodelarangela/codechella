@@ -43,6 +43,15 @@ export const Header = styled.header`
         left: 50%;
         transform: translatex(-50%)
       }
+      & > a.active::before {
+        content: '';
+        position: absolute;
+        background-color: ${({ theme }) => theme.textColor};
+        height: 100%;
+        width: .25rem;
+        inset: 0;
+        left: -1rem;
+      }
     }
     }
   @media screen and (min-width: 768px) {
