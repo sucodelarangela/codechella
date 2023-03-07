@@ -5,7 +5,6 @@ export const Footer = styled.footer`
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  /* VERIFICAR COR DO FOOTER DE ACORDO COM O TEMA */
   background: ${props => props.themeStatus ? props.theme.primaryBlue : props.theme.lightBlue};
   padding: 1.5rem;
   & .social {
@@ -46,8 +45,7 @@ export const Footer = styled.footer`
     flex-direction: row;
     justify-content: space-between;
     margin: 0 auto;
-    max-width: 1280px;
-    padding: 3.125rem 3.75rem;
+    padding: 3.125rem 7.5rem;
     & .social {
       align-items: flex-start;
       & > div {

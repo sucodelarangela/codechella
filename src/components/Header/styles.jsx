@@ -46,7 +46,7 @@ export const Header = styled.header`
       & > a.active::before {
         content: '';
         position: absolute;
-        background-color: ${({ theme }) => theme.textColor};
+        background-color: #FFF;
         height: 100%;
         width: .25rem;
         inset: 0;
@@ -75,6 +75,12 @@ export const Header = styled.header`
           font-size: 1.125rem;
           &:not(:last-child)::after {
             display: none;
+          }
+          & > a.active::before {
+            width: 100%;
+            height: 3px;
+            inset: 0;
+            margin-top: 2rem;
           }
         }
       }
