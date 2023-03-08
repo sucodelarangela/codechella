@@ -27,7 +27,7 @@ export const Header = ({ theme, setTheme }) => {
         <nav>
           <ul>
             <li><NavLink to='/experience'>A Experiência</NavLink></li>
-            <li>Mapa de Setores</li>
+            <li><NavLink to='/sectors'>Mapa de Setores</NavLink></li>
             <li>Informações</li>
             <li>Ingresso</li>
             <li onClick={() => setTheme(!theme)}>Tema: {theme ? 'Boreal' : 'Summer'}</li>
@@ -37,7 +37,7 @@ export const Header = ({ theme, setTheme }) => {
       <nav className='nav'>
         <ul>
           <li><NavLink to='/experience'>A Experiência</NavLink></li>
-          <li>Mapa de Setores</li>
+          <li><NavLink to='/sectors'>Mapa de Setores</NavLink></li>
           <li>Informações</li>
           <li>Ingresso</li>
           <li onClick={() => setTheme(!theme)}>Tema: {theme ? 'Boreal' : 'Summer'}</li>

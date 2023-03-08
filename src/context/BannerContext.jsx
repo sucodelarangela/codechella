@@ -34,6 +34,12 @@ export const useBannerContext = (pathname, theme) => {
         theme ? setFilter('boreal') : setFilter('summer');
         setImage(banner.experience.image);
         setText(banner.experience.text);
+        break;
+      case '/sectors':
+        theme ? setFilter('boreal') : setFilter('summer');
+        setImage(banner.sectorMap.image);
+        setText(banner.sectorMap.text);
+        break;
       default:
         break;
     }

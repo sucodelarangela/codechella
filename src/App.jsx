@@ -9,6 +9,7 @@ import { Home } from "pages/Home";
 import { Experience } from "pages/Experience";
 import { Footer } from "components/Footer";
 import { BannerProvider } from "context/BannerContext";
+import { Sectors } from "pages/Sectors";
 
 function App() {
   const [theme, setTheme] = useState(true);
@@ -24,6 +25,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home theme={theme} />} />
           <Route path='/experience' element={<Experience theme={theme} />} />
+          <Route path='/sectors' element={<Sectors theme={theme} />} />
         </Routes>
       </Router>
       <Footer theme={theme} />

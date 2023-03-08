@@ -29,6 +29,15 @@ export const BasicSection = styled.section`
     font-weight: 500;
     line-height: 2.5rem;
   }
+  &.sector_details > img {
+    height: 15rem;
+  }
+  @media screen and (min-width: 768px) {
+    &.sector_details > img {
+      width: 24rem;
+      margin: 0 auto;
+    }
+  }
   @media screen and (min-width: 1280px) {
     flex-direction: row;
     gap: 3rem;
@@ -39,6 +48,13 @@ export const BasicSection = styled.section`
       &:nth-of-type(2) {
         flex-direction: row-reverse;
         text-align: right;
+      }
+    }
+    &.sector_details {
+      flex-direction: column;
+      width: 100%;
+      & img {
+        min-width: unset;
       }
     }
     & img {
