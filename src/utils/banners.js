@@ -18,5 +18,9 @@ export const banner = {
   tickets: {
     image: '/tickets.jpg',
     text: 'Garanta seu Ingresso'
+  },
+  ticket: {
+    image: '/ticket.jpg',
+    text: 'Seu ingresso está aqui!'
   }
 };
