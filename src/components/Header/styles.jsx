@@ -43,7 +43,7 @@ export const Header = styled.header`
         left: 50%;
         transform: translatex(-50%)
       }
-      & > a.active::before {
+      & > a.active::before, & > a:hover::before {
         content: '';
         position: absolute;
         background-color: #FFF;
@@ -76,7 +76,7 @@ export const Header = styled.header`
           &:not(:last-child)::after {
             display: none;
           }
-          & > a.active::before {
+          & > a.active::before, & > a:hover::before {
             width: 100%;
             height: 3px;
             inset: 0;
