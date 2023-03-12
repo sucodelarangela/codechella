@@ -1,10 +1,12 @@
 import * as S from "./styles";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { MdArrowForward } from 'react-icons/md';
 import { Input } from "components/Input";
 import { Button } from "components/Button";
 
 export const Form = () => {
+  const navigate = useNavigate();
   const [values, setValues] = useState({
     name: '',
     email: '',
@@ -16,8 +18,13 @@ export const Form = () => {
     setValues({ ...values, [e.target.name]: e.target.value });
   }
 
+  function handleSubmit(e) {
+    e.preventDefault();
+    navigate('/your-ticket');
+  }
+
   return (
-    <S.Form>
+    <S.Form onSubmit={handleSubmit}>
       <Input
         label='Nome completo:'
         id='name'
@@ -57,7 +64,7 @@ export const Form = () => {
           />
         </div>
       </fieldset>
-      <Button>Avançar! <MdArrowForward size={32} /></Button>
+      <Button type="submit">Avançar! <MdArrowForward size={32} /></Button>
     </S.Form>
   );
 };

@@ -30,6 +30,7 @@ function App() {
           <Route path='/sectors' element={<Sectors theme={theme} />} />
           <Route path='/information' element={<GeneralInfo theme={theme} />} />
           <Route path='/tickets' element={<BuyTickets theme={theme} />} />
+          <Route path='/your-ticket' element={<BuyTickets theme={theme} />} />
         </Routes>
       </Router>
       <Footer theme={theme} />
