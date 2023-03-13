@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Sling as Hamburger } from 'hamburger-react';
 
@@ -8,6 +8,10 @@ import logo from 'assets/logo.png';
 
 export const Header = ({ theme, setTheme }) => {
   const [isOpen, setOpen] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem('theme', theme);
+  }, [theme]);
 
   return (
     <S.Header>

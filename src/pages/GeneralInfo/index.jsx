@@ -1,10 +1,9 @@
 import { InfoTitle, Section } from "./styles";
 import { VscTriangleUp } from 'react-icons/vsc';
 import { Accordion } from '@mantine/core';
-import { boreal, summer } from "styles/themes";
 import { Link } from "react-router-dom";
 
-export const GeneralInfo = ({ theme }) => {
+export const GeneralInfo = () => {
   return (
     <main className="container">
       <InfoTitle>Perguntas Frequentes:</InfoTitle>
@@ -19,7 +18,7 @@ export const GeneralInfo = ({ theme }) => {
           <Accordion.Item value="attractions">
             <Accordion.Control>Quais serão as atrações?</Accordion.Control>
             <Accordion.Panel>Teremos dois dias de shows, o primeiro (11/03) com bandas de rock, e o segundo (12/03) com bandas pop.{' '}
-              <Link to='/'>Confira o line-up em detalhes clicando neste link!</Link>
+              <Link to='/#lineup'>Confira o line-up em detalhes clicando neste link!</Link>
             </Accordion.Panel>
           </Accordion.Item>
 

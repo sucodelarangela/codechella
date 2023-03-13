@@ -14,7 +14,7 @@ import { GeneralInfo } from "pages/GeneralInfo";
 import { BuyTickets } from "pages/BuyTickets";
 
 function App() {
-  const [theme, setTheme] = useState(true);
+  const [theme, setTheme] = useState(JSON.parse(localStorage.getItem('theme')));
 
   return (
     <ThemeProvider theme={theme ? boreal : summer}>
