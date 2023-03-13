@@ -3,9 +3,9 @@ import logo from 'assets/logo.png';
 import icon from 'assets/icon.png';
 import qrcode from 'assets/qrcode.png';
 
-export const Ticket = () => {
+export const Ticket = ({ filter }) => {
   return (
-    <S.Ticket>
+    <S.Ticket filter={filter}>
       <div className='header' aria-hidden="true">
         <img src={logo} alt="" aria-hidden="true" />
         <img src={icon} alt="" aria-hidden="true" />
