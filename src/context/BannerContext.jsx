@@ -49,10 +49,12 @@ export const useBannerContext = (pathname, theme) => {
         theme ? setFilter('boreal') : setFilter('summer');
         setImage(banner.tickets.image);
         setText(banner.tickets.text);
+        break;
       case '/your-ticket':
         theme ? setFilter('boreal') : setFilter('summer');
         setImage(banner.ticket.image);
         setText(banner.ticket.text);
+        break;
       default:
         break;
     }

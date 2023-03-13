@@ -8,6 +8,7 @@ export const Banner = styled.section`
   text-align: center;
   height: 16.875rem;
   width: 100%;
+  padding: 1.5rem;
   position: relative;
   &::before {
     content: '';
