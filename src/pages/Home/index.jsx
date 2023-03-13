@@ -43,7 +43,7 @@ export const Home = ({ theme }) => {
         >
           <Button>Comprar ingresso!<MdLocalActivity size={32} /></Button>
         </BasicSection>
-        <S.Title>/Line-Up/</S.Title>
+        <S.Title id="lineup">/Line-Up/</S.Title>
         <LineUp lineup={lineups.lineup1} />
         <LineUp lineup={lineups.lineup2} />
       </main>

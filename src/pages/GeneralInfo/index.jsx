@@ -2,6 +2,7 @@ import { InfoTitle, Section } from "./styles";
 import { VscTriangleUp } from 'react-icons/vsc';
 import { Accordion } from '@mantine/core';
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 export const GeneralInfo = () => {
   return (
@@ -18,7 +19,7 @@ export const GeneralInfo = () => {
           <Accordion.Item value="attractions">
             <Accordion.Control>Quais serão as atrações?</Accordion.Control>
             <Accordion.Panel>Teremos dois dias de shows, o primeiro (11/03) com bandas de rock, e o segundo (12/03) com bandas pop.{' '}
-              <Link to='/#lineup'>Confira o line-up em detalhes clicando neste link!</Link>
+              <HashLink smooth to='/#lineup'>Confira o line-up em detalhes clicando neste link!</HashLink>
             </Accordion.Panel>
           </Accordion.Item>
 
