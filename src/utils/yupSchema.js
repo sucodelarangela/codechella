@@ -15,6 +15,8 @@ export const yupSchema = yup.object({
     }),
   email: yup.string().email()
     .required("Campo obrigatório."),
+  sector: yup.string().required("Campo obrigatório."),
+  showDate: yup.string().required("Campo obrigatório."),
   ticket: yup.string().required("Campo obrigatório."),
   date: yup.date()
     .required("Campo obrigatório.")
