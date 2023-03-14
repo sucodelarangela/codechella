@@ -1,70 +1,70 @@
-import * as S from "./styles";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import * as S from './styles';
+import { useNavigate } from 'react-router-dom';
 import { MdArrowForward } from 'react-icons/md';
-import { Input } from "components/Input";
-import { Button } from "components/Button";
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { yupSchema } from 'utils/yupSchema';
+import { Button } from 'components/Button';
 
 export const Form = () => {
   const navigate = useNavigate();
-  const [values, setValues] = useState({
-    name: '',
-    email: '',
-    ticket: '',
-    date: ''
-  });
+  const {
+    register,
+    handleSubmit: onSubmit,
+    formState: { errors }
+  } = useForm({ resolver: yupResolver(yupSchema) });
 
-  function handleChange(e) {
-    setValues({ ...values, [e.target.name]: e.target.value });
-  }
-
-  function handleSubmit(e) {
-    e.preventDefault();
+  function handleSubmit(data) {
     navigate('/your-ticket');
   }
 
   return (
-    <S.Form onSubmit={handleSubmit}>
-      <Input
-        label='Nome completo:'
+    <S.Form onSubmit={onSubmit(handleSubmit)}>
+      <label htmlFor='name'>Nome completo:</label>
+      <input
+        className={errors?.name && 'error'}
         id='name'
         placeholder='Insira seu nome'
         type='text'
-        value={values}
-        onChange={(e) => handleChange(e)}
+        {...register('name')}
       />
-      <Input
-        label='Email:'
+      {errors.name && <span className="error">{errors.name.message}</span>}
+      <label htmlFor='email'>Email:</label>
+      <input
+        className={errors?.email && 'error'}
         id='email'
         placeholder='Insira seu e-mail'
         type='email'
-        value={values}
-        onChange={(e) => handleChange(e)}
+        {...register('email')}
       />
+      {errors.email && <span className="error">{errors.email.message.includes('valid') ? 'Formato de e-mail inválido.' : 'Campo obrigatório.'}</span>}
       <fieldset>
         <div>
-          <Input
-            label='Tipo de ingresso:'
+          <label htmlFor='ticket'>Tipo de ingresso:</label>
+          <select
+            className={errors?.ticket && 'error'}
+            defaultValue=''
             id='ticket'
-            placeholder='Tipo de ingresso'
-            type='select'
-            onChange={(e) => handleChange(e)}
+            {...register('ticket')}
           >
-            <option value="fullPrice">Inteira</option>
-            <option value="halfPrice">Meia-entrada</option>
-          </Input>
+            <option value='' disabled>Tipo de ingresso</option>
+            <option value='Inteira'>Inteira</option>
+            <option value='Meia-entrada'>Meia-entrada</option>
+          </select>
+          {errors.ticket && <span className="error">{errors.ticket.message}</span>}
         </div>
         <div>
-          <Input
-            label='Data de nascimento:'
+          <label htmlFor='date'>Data de nascimento:</label>
+          <input
+            className={errors?.date && 'error'}
             id='date'
             type='date'
-            value={values}
-            onChange={(e) => handleChange(e)}
+            {...register('date')}
           />
+          {errors.date && <span className="error">{errors.date.message.includes('Invalid') ? 'Formato de data inválido' : errors.date.message}</span>}
         </div>
       </fieldset>
-      <Button type="submit">Avançar! <MdArrowForward size={32} /></Button>
+      <Button type='submit'>Avançar! <MdArrowForward size={32} /></Button>
     </S.Form>
   );
 };

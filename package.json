@@ -10,16 +10,19 @@
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
+    "@hookform/resolvers": "^2.9.11",
     "@mantine/core": "^6.0.1",
     "@mantine/hooks": "^6.0.1",
     "hamburger-react": "^2.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.43.5",
     "react-icons": "^4.7.1",
     "react-router-dom": "^6.8.2",
     "react-router-hash-link": "^2.4.3",
     "styled-components": "^5.3.6",
-    "vite-jsconfig-paths": "^2.0.1"
+    "vite-jsconfig-paths": "^2.0.1",
+    "yup": "^1.0.2"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",

@@ -30,6 +30,15 @@ export const Form = styled.form`
   & option {
     color: #444;
   }
+  & span.error {
+    display: flex;
+    color: red;
+    margin-bottom: 1rem;
+  }
+  & input.error, & select.error {
+    border: 1px solid red;
+    margin-bottom: .5rem;
+  }
   @media screen and (min-width: 768px) {
     padding-bottom: 3rem;
   }
