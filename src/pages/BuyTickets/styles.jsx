@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { SectorsTitle } from "pages/Sectors/styles";
+import { Button } from "components/Button/styles";
 
 const Form = styled.form`
   display: flex;
@@ -55,4 +56,8 @@ const TicketTitle = styled(SectorsTitle)`
   max-width: 49.5rem;
 `;
 
-export { Form, TicketTitle };
+const DownloadButton = styled(Button)`
+  margin-bottom: 4rem;
+`;
+
+export { DownloadButton, Form, TicketTitle };

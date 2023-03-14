@@ -1,13 +1,18 @@
-import { TicketTitle } from "./styles";
+import { DownloadButton, TicketTitle } from "./styles";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { InfoTitle } from "pages/GeneralInfo/styles";
 import { Form } from "./Form";
 import { Ticket } from "./Ticket";
+import { handleScreenshot } from "utils/handleScreenshot";
 
-export const BuyTickets = ({ theme }) => {
+export const BuyTickets = ({ theme, user, setUser }) => {
   const { pathname } = useLocation();
   const [filter, setFilter] = useState('0%');
+
+  useEffect(() => {
+    setUser(JSON.parse(localStorage.getItem('buyer')));
+  }, []);
 
   useEffect(() => {
     theme ? setFilter('0%') : setFilter('80%');
@@ -18,12 +23,18 @@ export const BuyTickets = ({ theme }) => {
       {pathname === "/tickets" ? (
         <>
           <InfoTitle>Preencha o formulário a seguir:</InfoTitle>
-          <Form />
+          <Form setUser={setUser} />
         </>
       ) : (
         <>
           <TicketTitle>Uhul, agora sim!<br />Seu ingresso está aqui, apresente na entrada do evento e divirta-se!</TicketTitle>
-          <Ticket filter={filter} />
+          <Ticket filter={filter} user={user} />
+          <DownloadButton
+            onClick={() => handleScreenshot('ticket')}
+            type='button'
+          >
+            Baixar ingresso!
+          </DownloadButton>
         </>
       )}
     </main>

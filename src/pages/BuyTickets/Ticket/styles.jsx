@@ -4,7 +4,7 @@ export const Ticket = styled.section`
   background: ${({ theme }) => theme.gradient};
   padding: 2rem;
   margin: 0 auto;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   width: 100%;
   max-width: 49.5rem;
   & .header {

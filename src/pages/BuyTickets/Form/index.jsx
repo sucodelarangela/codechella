@@ -6,8 +6,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { yupSchema } from 'utils/yupSchema';
 import { Button } from 'components/Button';
 
-export const Form = () => {
-  const navigate = useNavigate();
+export const Form = ({ setUser }) => {
   const {
     register,
     handleSubmit: onSubmit,
@@ -15,7 +14,16 @@ export const Form = () => {
   } = useForm({ resolver: yupResolver(yupSchema) });
 
   function handleSubmit(data) {
-    navigate('/your-ticket');
+    const buyer = {
+      name: data.name,
+      email: data.email,
+      sector: data.sector,
+      showDate: data.showDate,
+      ticket: data.ticket,
+      dateOfBirth: data.date.toLocaleDateString()
+    };
+    localStorage.setItem('buyer', JSON.stringify(buyer));
+    setUser(buyer);
   }
 
   return (

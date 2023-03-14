@@ -47,6 +47,9 @@ const MapSection = styled.section`
     }
   }
   @media screen and (min-width: 768px) {
+    & img {
+      margin: 0 auto;
+    }
     & ul > h4 {
       font-size: 2rem;
     }
