@@ -10,6 +10,7 @@ import audience2 from 'assets/summer-prefooter.jpg';
 import guitar from 'assets/boreal-prefooter.jpg';
 import guitarplayers from 'assets/guitarplayers.jpg';
 import { lineups } from "utils/lineups";
+import { Link } from "react-router-dom";
 
 const borealTheme = {
   img1: guitarplayers,
@@ -41,7 +42,7 @@ export const Home = ({ theme }) => {
           title={`< 11 e 12 de Março >\r\nAluródromo de São Paulo`}
           text='Hora de programar nossa memória com novas lembranças! Uma nova experiência sobre música, linguagens e, claro, tecnologia! Somos um festival diverso, com vários artistas e referências. Divirta-se!'
         >
-          <Button>Comprar ingresso!<MdLocalActivity size={32} /></Button>
+          <S.NewLink to='/tickets'>Comprar ingresso!<MdLocalActivity size={32} /></S.NewLink>
         </BasicSection>
         <S.Title id="lineup">/Line-Up/</S.Title>
         <LineUp lineup={lineups.lineup1} />

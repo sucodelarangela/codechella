@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { Button } from "components/Button/styles";
 
 const Title = styled.h2`
   display: inline-block;
@@ -19,4 +21,8 @@ const Image = styled.img`
   width: 100%;
 `;
 
-export { Title, Image };
+const NewLink = styled(Button).attrs({ as: Link })`
+  
+`;
+
+export { Title, Image, NewLink };
