@@ -29,6 +29,9 @@ export const Footer = styled.footer`
         align-items: center;
         justify-content: center;
         gap: 0.5rem;
+        & a > svg:hover {
+          filter: invert(80%);
+        }
       }
     }
   }
