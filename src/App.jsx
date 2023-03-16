@@ -4,7 +4,7 @@ import { ThemeProvider } from "styled-components";
 import { boreal, summer } from "styles/themes";
 import { GlobalStyles } from "styles/globalStyles";
 import { Header } from "components/Header";
-import { Banner } from "components/Banner";
+import { DefaultPage } from "pages/DefaultPage";
 import { Home } from "pages/Home";
 import { Experience } from "pages/Experience";
 import { Footer } from "components/Footer";
@@ -12,7 +12,7 @@ import { BannerProvider } from "context/BannerContext";
 import { Sectors } from "pages/Sectors";
 import { GeneralInfo } from "pages/GeneralInfo";
 import { BuyTickets } from "pages/BuyTickets";
-import { DefaultPage } from "pages/DefaultPage";
+import { NotFound } from "pages/NotFound";
 
 function App() {
   const [theme, setTheme] = useState(JSON.parse(localStorage.getItem('theme')));
@@ -32,6 +32,7 @@ function App() {
             <Route path='/tickets' element={!user ? <BuyTickets theme={theme} setUser={setUser} /> : <Navigate to='/your-ticket' />} />
             <Route path='/your-ticket' element={user ? <BuyTickets theme={theme} user={user} setUser={setUser} /> : <Navigate to='/tickets' />} />
           </Route>
+          <Route path='*' element={<NotFound theme={theme} />} />
         </Routes>
       </Router>
       <Footer theme={theme} />

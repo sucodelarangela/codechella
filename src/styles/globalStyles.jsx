@@ -50,6 +50,10 @@ export const GlobalStyles = createGlobalStyle`
     padding: 0 1.5rem;
   }
 
+  .container.notfound {
+    min-height: 100vh;
+  }
+
   @media screen and (min-width: 768px) {
     .container {
       display: block;
