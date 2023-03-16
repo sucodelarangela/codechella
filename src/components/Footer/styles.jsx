@@ -38,6 +38,22 @@ export const Footer = styled.footer`
   & p {
     text-align: center;
   }
+  & a.link {
+    color: inherit;
+    font-weight: 700;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-bottom: 2px solid;
+      width: 0%;
+      transition: 0.3s width;
+    }
+    &:hover::before, &:focus::before {
+      width: 100%;
+    }
+  }
   @media screen and (min-width: 768px) {
     & .social > div {
       flex-direction: row;

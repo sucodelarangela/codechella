@@ -1,10 +1,16 @@
+import { useThemeValue } from "context/UserThemeContext";
 import { InfoTitle } from "pages/GeneralInfo/styles";
 import { NewLink } from "pages/Home/styles";
 import { useEffect, useState } from "react";
 import { Image } from "./styles";
 
-export const NotFound = ({ theme }) => {
+export const NotFound = () => {
+  const { theme } = useThemeValue();
   const [filter, setFilter] = useState(theme);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     setFilter(theme);

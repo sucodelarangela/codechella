@@ -34,10 +34,10 @@ function App() {
               <Route path='/tickets' element={!user ? <BuyTickets setUser={setUser} /> : <Navigate to='/your-ticket' />} />
               <Route path='/your-ticket' element={user ? <BuyTickets user={user} setUser={setUser} /> : <Navigate to='/tickets' />} />
             </Route>
-            <Route path='*' element={<NotFound theme={theme} />} />
+            <Route path='*' element={<NotFound />} />
           </Routes>
+          <Footer />
         </Router>
-        <Footer theme={theme} />
       </UserThemeProvider>
     </ThemeProvider>
   );
