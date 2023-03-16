@@ -33,10 +33,6 @@ export const GlobalStyles = createGlobalStyle`
     background: ${({ theme }) => theme.primaryBlue};
   }
 
-  html {
-    scroll-behavior: smooth;
-  }
-
   a {
     color: #FFF;
     text-decoration: none;
