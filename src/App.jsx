@@ -12,6 +12,7 @@ import { BannerProvider } from "context/BannerContext";
 import { Sectors } from "pages/Sectors";
 import { GeneralInfo } from "pages/GeneralInfo";
 import { BuyTickets } from "pages/BuyTickets";
+import { DefaultPage } from "pages/DefaultPage";
 
 function App() {
   const [theme, setTheme] = useState(JSON.parse(localStorage.getItem('theme')));
@@ -22,16 +23,15 @@ function App() {
       <GlobalStyles />
       <Router>
         <Header theme={theme} setTheme={setTheme} />
-        <BannerProvider>
-          <Banner theme={theme} />
-        </BannerProvider>
         <Routes>
-          <Route path='/' element={<Home theme={theme} />} />
-          <Route path='/experience' element={<Experience theme={theme} />} />
-          <Route path='/sectors' element={<Sectors theme={theme} />} />
-          <Route path='/information' element={<GeneralInfo theme={theme} />} />
-          <Route path='/tickets' element={!user ? <BuyTickets theme={theme} setUser={setUser} /> : <Navigate to='/your-ticket' />} />
-          <Route path='/your-ticket' element={user ? <BuyTickets theme={theme} user={user} setUser={setUser} /> : <Navigate to='/tickets' />} />
+          <Route path='/' element={<BannerProvider><DefaultPage theme={theme} /></BannerProvider>}>
+            <Route path='/' element={<Home theme={theme} />} />
+            <Route path='/experience' element={<Experience theme={theme} />} />
+            <Route path='/sectors' element={<Sectors theme={theme} />} />
+            <Route path='/information' element={<GeneralInfo theme={theme} />} />
+            <Route path='/tickets' element={!user ? <BuyTickets theme={theme} setUser={setUser} /> : <Navigate to='/your-ticket' />} />
+            <Route path='/your-ticket' element={user ? <BuyTickets theme={theme} user={user} setUser={setUser} /> : <Navigate to='/tickets' />} />
+          </Route>
         </Routes>
       </Router>
       <Footer theme={theme} />
