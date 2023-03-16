@@ -5,8 +5,10 @@ import { InfoTitle } from "pages/GeneralInfo/styles";
 import { Form } from "./Form";
 import { Ticket } from "./Ticket";
 import { handleScreenshot } from "utils/handleScreenshot";
+import { useThemeValue } from "context/UserThemeContext";
 
-export const BuyTickets = ({ theme, user, setUser }) => {
+export const BuyTickets = ({ user, setUser }) => {
+  const { theme } = useThemeValue();
   const { pathname } = useLocation();
   const [filter, setFilter] = useState('0%');
 

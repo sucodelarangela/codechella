@@ -1,10 +1,10 @@
 import { Banner } from "components/Banner";
 import { Outlet } from "react-router-dom";
 
-export const DefaultPage = ({ theme }) => {
+export const DefaultPage = () => {
   return (
     <>
-      <Banner theme={theme} />
+      <Banner />
       <Outlet />
     </>
   );

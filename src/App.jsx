@@ -13,6 +13,7 @@ import { Sectors } from "pages/Sectors";
 import { GeneralInfo } from "pages/GeneralInfo";
 import { BuyTickets } from "pages/BuyTickets";
 import { NotFound } from "pages/NotFound";
+import { UserThemeProvider } from "context/UserThemeContext";
 
 function App() {
   const [theme, setTheme] = useState(JSON.parse(localStorage.getItem('theme')));
@@ -20,22 +21,24 @@ function App() {
 
   return (
     <ThemeProvider theme={theme ? boreal : summer}>
-      <GlobalStyles />
-      <Router>
-        <Header theme={theme} setTheme={setTheme} />
-        <Routes>
-          <Route path='/' element={<BannerProvider><DefaultPage theme={theme} /></BannerProvider>}>
-            <Route path='/' element={<Home theme={theme} />} />
-            <Route path='/experience' element={<Experience theme={theme} />} />
-            <Route path='/sectors' element={<Sectors theme={theme} />} />
-            <Route path='/information' element={<GeneralInfo theme={theme} />} />
-            <Route path='/tickets' element={!user ? <BuyTickets theme={theme} setUser={setUser} /> : <Navigate to='/your-ticket' />} />
-            <Route path='/your-ticket' element={user ? <BuyTickets theme={theme} user={user} setUser={setUser} /> : <Navigate to='/tickets' />} />
-          </Route>
-          <Route path='*' element={<NotFound theme={theme} />} />
-        </Routes>
-      </Router>
-      <Footer theme={theme} />
+      <UserThemeProvider value={{ theme, setTheme }}>
+        <GlobalStyles />
+        <Router>
+          <Header />
+          <Routes>
+            <Route path='/' element={<BannerProvider><DefaultPage /></BannerProvider>}>
+              <Route path='/' element={<Home />} />
+              <Route path='/experience' element={<Experience />} />
+              <Route path='/sectors' element={<Sectors />} />
+              <Route path='/information' element={<GeneralInfo />} />
+              <Route path='/tickets' element={!user ? <BuyTickets setUser={setUser} /> : <Navigate to='/your-ticket' />} />
+              <Route path='/your-ticket' element={user ? <BuyTickets user={user} setUser={setUser} /> : <Navigate to='/tickets' />} />
+            </Route>
+            <Route path='*' element={<NotFound theme={theme} />} />
+          </Routes>
+        </Router>
+        <Footer theme={theme} />
+      </UserThemeProvider>
     </ThemeProvider>
   );
 }

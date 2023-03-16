@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { MdLocalActivity } from 'react-icons/md';
-import { Button } from "components/Button";
 import { BasicSection } from "components/BasicSection";
 import { LineUp } from "./LineUp";
 
@@ -10,7 +9,7 @@ import audience2 from 'assets/summer-prefooter.jpg';
 import guitar from 'assets/boreal-prefooter.jpg';
 import guitarplayers from 'assets/guitarplayers.jpg';
 import { lineups } from "utils/lineups";
-import { Link } from "react-router-dom";
+import { useThemeValue } from "context/UserThemeContext";
 
 const borealTheme = {
   img1: guitarplayers,
@@ -26,7 +25,8 @@ const summerTheme = {
   alt2: 'Três amigas se divertindo em um show'
 };
 
-export const Home = ({ theme }) => {
+export const Home = () => {
+  const { theme } = useThemeValue();
   const [img, setImg] = useState(borealTheme);
 
   useEffect(() => {

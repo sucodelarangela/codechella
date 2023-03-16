@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { Sling as Hamburger } from 'hamburger-react';
+import { useThemeValue } from 'context/UserThemeContext';
 
 import * as S from './styles';
 
 import logo from 'assets/logo.png';
 
-export const Header = ({ theme, setTheme }) => {
+export const Header = () => {
+  const { theme, setTheme } = useThemeValue();
   const [isOpen, setOpen] = useState(false);
   const { pathname } = useLocation();
 

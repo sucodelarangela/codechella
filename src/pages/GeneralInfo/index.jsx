@@ -1,7 +1,6 @@
 import { InfoTitle, Section } from "./styles";
 import { VscTriangleUp } from 'react-icons/vsc';
 import { Accordion } from '@mantine/core';
-import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 export const GeneralInfo = () => {
