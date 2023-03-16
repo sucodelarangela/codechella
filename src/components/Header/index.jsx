@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { Sling as Hamburger } from 'hamburger-react';
 
 import * as S from './styles';
@@ -8,10 +8,16 @@ import logo from 'assets/logo.png';
 
 export const Header = ({ theme, setTheme }) => {
   const [isOpen, setOpen] = useState(false);
+  const { pathname } = useLocation();
 
   useEffect(() => {
     localStorage.setItem('theme', theme);
   }, [theme]);
+
+  // Close menu when redirected to the page
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
 
   return (
     <S.Header>
