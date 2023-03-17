@@ -1,18 +1,11 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { DefaultPage, Home, Experience, Sectors, GeneralInfo, BuyTickets, NotFound } from 'pages';
+import { Header, Footer } from 'components';
 import { ThemeProvider } from "styled-components";
 import { boreal, summer } from "styles/themes";
 import { GlobalStyles } from "styles/globalStyles";
-import { Header } from "components/Header";
-import { DefaultPage } from "pages/DefaultPage";
-import { Home } from "pages/Home";
-import { Experience } from "pages/Experience";
-import { Footer } from "components/Footer";
 import { BannerProvider } from "context/BannerContext";
-import { Sectors } from "pages/Sectors";
-import { GeneralInfo } from "pages/GeneralInfo";
-import { BuyTickets } from "pages/BuyTickets";
-import { NotFound } from "pages/NotFound";
 import { UserThemeProvider } from "context/UserThemeContext";
 
 function App() {

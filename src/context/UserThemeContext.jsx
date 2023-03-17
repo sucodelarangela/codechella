@@ -13,3 +13,5 @@ export const UserThemeProvider = ({ children, value }) => {
 export const useThemeValue = () => {
   return useContext(ThemeContext);
 };
+
+/* This context is used to manage boolean theme values for dynamic styles. It's not related specifically to the ThemeProvider of styled-components */
