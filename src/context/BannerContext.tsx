@@ -1,57 +1,61 @@
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState, useEffect, ReactElement } from 'react';
 import { banner } from 'utils/banners';
 
-const BannerContext = createContext();
+interface IBannerContext {
+  image: string;
+  setImage: (value: string) => void;
+  text: string;
+  setText: (value: string) => void;
+}
 
-export const BannerProvider = ({ children }) => {
+// @ts-ignore
+const BannerContext = createContext<IBannerContext>();
+
+interface BannerProviderProps {
+  children: ReactElement;
+}
+
+export const BannerProvider = ({ children }: BannerProviderProps) => {
   const [image, setImage] = useState(banner.home.image[0]);
-  const [filter, setFilter] = useState('');
   const [text, setText] = useState(banner.home.text);
 
   return (
-    <BannerContext.Provider value={{ image, filter, text, setImage, setFilter, setText }}>
+    <BannerContext.Provider value={{ image, text, setImage, setText }}>
       {children}
     </BannerContext.Provider>
   );
 };
 
-export const useBannerContext = (pathname, theme) => {
-  const { image, setImage, filter, setFilter, text, setText } = useContext(BannerContext);
+export const useBannerContext = (pathname: string, theme: boolean) => {
+  const { image, setImage, text, setText } = useContext<IBannerContext>(BannerContext);
 
   useEffect(() => {
     switch (pathname) {
       case '/':
         if (theme) {
           setImage(banner.home.image[0]);
-          setFilter('');
         } else {
           setImage(banner.home.image[1]);
-          setFilter('');
         }
         setText(banner.home.text);
         break;
       case '/experience':
-        theme ? setFilter('boreal') : setFilter('summer');
         setImage(banner.experience.image);
         setText(banner.experience.text);
         break;
       case '/sectors':
-        theme ? setFilter('boreal') : setFilter('summer');
         setImage(banner.sectorMap.image);
         setText(banner.sectorMap.text);
         break;
       case '/information':
-        theme ? setFilter('boreal') : setFilter('summer');
         setImage(banner.generalInfo.image);
         setText(banner.generalInfo.text);
         break;
       case '/tickets':
-        theme ? setFilter('boreal') : setFilter('summer');
         setImage(banner.tickets.image);
         setText(banner.tickets.text);
         break;
       case '/your-ticket':
-        theme ? setFilter('boreal') : setFilter('summer');
         setImage(banner.ticket.image);
         setText(banner.ticket.text);
         break;
@@ -60,5 +64,5 @@ export const useBannerContext = (pathname, theme) => {
     }
   }, [pathname, theme]);
 
-  return { image, filter, text };
+  return { image, text };
 };

@@ -6,12 +6,17 @@ import * as S from './styles';
 
 import logo from 'assets/logo.png';
 
-export const Header = ({ theme, setTheme }) => {
+interface HeaderProps {
+  theme: boolean;
+  setTheme: (value: boolean) => void;
+}
+
+export const Header = ({ theme, setTheme }: HeaderProps) => {
   const [isOpen, setOpen] = useState(false);
   const { pathname } = useLocation();
 
   useEffect(() => {
-    localStorage.setItem('theme', theme);
+    localStorage.setItem('theme', String(theme));
   }, [theme]);
 
   // Close menu when redirected to the page
@@ -25,7 +30,6 @@ export const Header = ({ theme, setTheme }) => {
         <img src={logo} alt="CodeChella, música para devs!" />
       </NavLink>
       <Hamburger
-        id='menu-icon'
         color='#FFF'
         easing='ease-in'
         label='Abrir menu de navegação'

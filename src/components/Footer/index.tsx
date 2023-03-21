@@ -27,7 +27,7 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-      <p>Desenvolvido por <a className='link' href='https://github.com/sucodelarangela' target='_blank'>Angela Caldas</a>. Design by Alura. Projeto fictício sem fins comerciais.</p>
+      <p>Desenvolvido por <a className='link' href='https://github.com/sucodelarangela' target='_blank'>Angela Caldas</a>.<br />Design by Alura. Projeto fictício sem fins comerciais.</p>
     </S.Footer>
   );
 };

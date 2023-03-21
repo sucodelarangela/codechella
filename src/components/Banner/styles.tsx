@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const Banner = styled.section`
+interface Props {
+  banner: string;
+}
+
+export const Banner = styled.section<Props>`
   display: flex;
   align-items: center;
   justify-content: center;
