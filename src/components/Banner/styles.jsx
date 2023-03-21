@@ -4,7 +4,7 @@ export const Banner = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: ${props => props.filter === 'boreal' ? 'linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4))' : 'none'};
+  background-image: ${({ theme }) => theme.bgImgRgba};
   text-align: center;
   height: 16.875rem;
   width: 100%;
@@ -16,7 +16,7 @@ export const Banner = styled.section`
     background-position: center;
     background-size: cover;
     inset: 0;
-    opacity: ${props => props.banner.includes('summer-home') || props.filter === 'summer' ? 0.4 : 1};
+    opacity: ${({ theme }) => theme.opacity};
     position: absolute;
     z-index: -1;
   }

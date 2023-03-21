@@ -12,7 +12,7 @@ export const Ticket = styled.section`
     justify-content: space-between;
     & img {
       height: 2rem;
-      filter: invert(${(props) => props.filter});
+      filter: invert(${({ theme }) => theme.invert});
     }
   }
   & .info {

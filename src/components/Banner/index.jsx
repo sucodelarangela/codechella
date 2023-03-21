@@ -2,15 +2,13 @@ import { useLocation } from 'react-router-dom';
 
 import * as S from './styles';
 import { useBannerContext } from 'context/BannerContext';
-import { useThemeValue } from 'context/UserThemeContext';
 
-export const Banner = () => {
-  const { theme } = useThemeValue();
+export const Banner = ({ theme }) => {
   const { pathname } = useLocation();
-  const { image, filter, text } = useBannerContext(pathname, theme);
+  const { image, text } = useBannerContext(pathname, theme);
 
   return (
-    <S.Banner banner={image} filter={filter}>
+    <S.Banner banner={image} >
       <h2>{text}</h2>
     </S.Banner >
   );

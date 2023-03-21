@@ -9,7 +9,6 @@ import audience2 from 'assets/summer-prefooter.jpg';
 import guitar from 'assets/boreal-prefooter.jpg';
 import guitarplayers from 'assets/guitarplayers.jpg';
 import { lineups } from "utils/lineups";
-import { useThemeValue } from "context/UserThemeContext";
 
 const borealTheme = {
   img1: guitarplayers,
@@ -25,8 +24,7 @@ const summerTheme = {
   alt2: 'Três amigas se divertindo em um show'
 };
 
-export const Home = () => {
-  const { theme } = useThemeValue();
+export const Home = ({ theme }) => {
   const [img, setImg] = useState(borealTheme);
 
   useEffect(() => {

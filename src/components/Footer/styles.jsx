@@ -5,7 +5,7 @@ export const Footer = styled.footer`
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  background: ${props => props.themeStatus ? props.theme.primaryBlue : props.theme.lightBlue};
+  background: ${({ theme }) => theme.footerBgColor};
   padding: 1.5rem;
   & .social {
     display: flex;
@@ -13,7 +13,7 @@ export const Footer = styled.footer`
     flex-direction: column;
     gap: 1rem;
     & img {
-      filter: invert(${(props) => props.invert});
+      filter: invert(${({ theme }) => theme.invert});
       width: 14rem;
     }
     & > div {

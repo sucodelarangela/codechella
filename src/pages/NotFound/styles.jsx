@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Image = styled.div`
 display: flex;
-  background-image: ${props => props.filter === 'boreal' ? 'linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4))' : 'none'};
+  background-image: ${({ theme }) => theme.bgImgRgba};
   height: 30rem;
   width: 100%;
   margin: 1.5rem 0;

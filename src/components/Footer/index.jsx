@@ -1,21 +1,12 @@
 import * as S from './styles';
-import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaWhatsapp, FaTwitch, FaInstagram, FaTwitter } from 'react-icons/fa';
-import { useThemeValue } from 'context/UserThemeContext';
 
 import logo from 'assets/logo.png';
 
 export const Footer = () => {
-  const { theme } = useThemeValue();
-  const [invert, setInvert] = useState(theme);
-
-  useEffect(() => {
-    theme ? setInvert('0%') : setInvert('75%');
-  }, [theme]);
-
   return (
-    <S.Footer invert={invert} themeStatus={theme}>
+    <S.Footer>
       <div className='social'>
         <img src={logo} alt="CodeChella, música para devs!" />
         <div>

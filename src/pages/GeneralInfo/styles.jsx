@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { boreal, summer } from "styles/themes";
+import { summer } from "styles/themes";
 import { Title } from "pages/Home/styles";
 
 const InfoTitle = styled(Title)`

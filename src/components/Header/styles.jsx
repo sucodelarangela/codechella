@@ -53,7 +53,7 @@ export const Header = styled.header`
         left: -1rem;
       }
     }
-    }
+  }
   @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: column;

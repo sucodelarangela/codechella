@@ -6,7 +6,11 @@ export const boreal = {
   lightGreen: '#36C1A0',
   lightBlue: '#B6BCFF',
   buttonHover: '#606ADA',
-  textColor: '#FFF'
+  textColor: '#FFF',
+  footerBgColor: '#4650BD',
+  bgImgRgba: 'linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4))',
+  opacity: 1,
+  invert: '0%'
 };
 
 export const summer = {
@@ -17,6 +21,10 @@ export const summer = {
   lightGreen: '#FBF0DD',
   lightBlue: '#FACF9D',
   buttonHover: '#519EC5',
-  textColor: '#444'
+  textColor: '#444',
+  footerBgColor: '#FACF9D',
+  bgImgRgba: 'none',
+  opacity: 0.4,
+  invert: '75%'
 };
 
