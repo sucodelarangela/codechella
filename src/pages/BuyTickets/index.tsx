@@ -5,12 +5,18 @@ import { InfoTitle } from "pages/GeneralInfo/styles";
 import { Form } from "./Form";
 import { Ticket } from "./Ticket";
 import { handleScreenshot } from "utils/handleScreenshot";
+import { IUser } from "shared/interfaces/IUser";
 
-export const BuyTickets = ({ user, setUser }) => {
+interface BuyTicketsProps {
+  user: IUser;
+  setUser: (value: IUser) => void;
+}
+
+export const BuyTickets = ({ user, setUser }: BuyTicketsProps) => {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    setUser(JSON.parse(localStorage.getItem('buyer')));
+    setUser(JSON.parse(localStorage.getItem('buyer')!));
   }, []);
 
   return (

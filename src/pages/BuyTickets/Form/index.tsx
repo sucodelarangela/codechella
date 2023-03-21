@@ -1,26 +1,30 @@
 import * as S from './styles';
-import { useNavigate } from 'react-router-dom';
 import { MdArrowForward } from 'react-icons/md';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { yupSchema } from 'utils/yupSchema';
 import { Button } from 'components/Button';
+import { IUser } from 'shared/interfaces/IUser';
 
-export const Form = ({ setUser }) => {
+interface FormProps {
+  setUser: (value: IUser) => void;
+}
+
+export const Form = ({ setUser }: FormProps) => {
   const {
     register,
     handleSubmit: onSubmit,
     formState: { errors }
-  } = useForm({ resolver: yupResolver(yupSchema) });
+  } = useForm<IUser>({ resolver: yupResolver(yupSchema) });
 
-  function handleSubmit(data) {
+  function handleSubmit(data: IUser) {
     const buyer = {
       name: data.name,
       email: data.email,
       sector: data.sector,
       showDate: data.showDate,
       ticket: data.ticket,
-      dateOfBirth: data.date.toLocaleDateString()
+      dateOfBirth: data.date!.toLocaleDateString()
     };
     localStorage.setItem('buyer', JSON.stringify(buyer));
     setUser(buyer);
@@ -45,7 +49,7 @@ export const Form = ({ setUser }) => {
         type='email'
         {...register('email')}
       />
-      {errors.email && <span className='error'>{errors.email.message.includes('valid') ? 'Formato de e-mail inválido.' : 'Campo obrigatório.'}</span>}
+      {errors.email && <span className='error'>{errors.email.message?.includes('valid') ? 'Formato de e-mail inválido.' : 'Campo obrigatório.'}</span>}
       <fieldset>
         <div>
           <label htmlFor='sector'>Setor:</label>
@@ -75,7 +79,7 @@ export const Form = ({ setUser }) => {
             <option value='11/03'>11 de Março</option>
             <option value='12/03'>12 de Março</option>
           </select>
-          {errors.showDate && <span className='error'>{errors.showDate.message.includes('Invalid') ? 'Data inválida.' : errors.showDate.message}</span>}
+          {errors.showDate && <span className='error'>{errors.showDate.message?.includes('Invalid') ? 'Data inválida.' : errors.showDate.message}</span>}
         </div>
       </fieldset>
       <fieldset>
@@ -101,7 +105,7 @@ export const Form = ({ setUser }) => {
             type='date'
             {...register('date')}
           />
-          {errors.date && <span className='error'>{errors.date.message.includes('Invalid') ? 'Formato de data inválido' : errors.date.message}</span>}
+          {errors.date && <span className='error'>{errors.date.message?.includes('Invalid') ? 'Formato de data inválido' : errors.date.message}</span>}
         </div>
       </fieldset>
       <Button type='submit'>Avançar! <MdArrowForward size={32} /></Button>

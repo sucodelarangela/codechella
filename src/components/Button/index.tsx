@@ -1,8 +1,8 @@
-import { ReactElement } from 'react';
+import { ReactNode } from 'react';
 import * as S from './styles';
 
 interface ButtonProps {
-  children: ReactElement | string;
+  children: ReactNode | string;
   type?: "button" | "submit" | "reset";
 }
 

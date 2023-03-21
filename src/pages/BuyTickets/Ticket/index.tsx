@@ -2,11 +2,16 @@ import * as S from './styles';
 import logo from 'assets/logo.png';
 import icon from 'assets/icon.png';
 import qrcode from 'assets/qrcode.png';
+import { IUser } from 'shared/interfaces/IUser';
 
-export const Ticket = ({ filter, user }) => {
+interface TicketProps {
+  user: IUser;
+}
+
+export const Ticket = ({ user }: TicketProps) => {
 
   return (
-    <S.Ticket id="ticket" filter={filter}>
+    <S.Ticket id="ticket">
       <div className='header' aria-hidden="true">
         <img src={logo} alt="" aria-hidden="true" />
         <img src={icon} alt="" aria-hidden="true" />
