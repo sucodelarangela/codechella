@@ -10,13 +10,13 @@ O **CodeChella** é uma página de um evento fictício de música inspirado no C
 
 Além do desafio em si, optei por fazer os dois temas sugeridos em vez de apenas um deles. Também optei por alimentar dinamicamente o preenchimento do ingresso com os dados fornecidos pelo usuário no formulário da página **Ingresso**. Esses dados são salvos no _localStorage_ do browser e possibilitam o redirecionamento dinâmico para a página do ingresso. Dessa forma, o usuário poderá fazer download do seu ingresso em formato PNG.
 
-Como desafio adicional, farei a conversão da aplicação de JavaScript para TypeScript nos próximos dias.
+Como desafio adicional, fiz a conversão da aplicação de JavaScript para TypeScript.
 
 As tecnologias e linguagens utilizadas nesse desafio foram:
 
 <div>
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+  <img src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
   <img src="https://img.shields.io/badge/styled components-3C3C3C?style=for-the-badge&logo=styled-components&logoColor=DB7093">
   <img src="https://img.shields.io/badge/react hook form / yup-081229?style=for-the-badge&logo=reacthookform&logoColor=EC5990">
   <img src="https://img.shields.io/badge/html2canvas-76ad3f?style=for-the-badge">
@@ -28,7 +28,7 @@ Você pode saber um pouco mais como funcionam os _challenges_ da Alura visitando
 | 🪧 Vitrine Dev |  |
 | ------------- | - |
 | ✨ Nome       | **CodeChella 2023** - Challenge Alura |
-| 🏷️ Tecnologias | React, JavaScript, styled-components |
+| 🏷️ Tecnologias | React, TypeScript, styled-components, yup, react-hook-form, html2canvas |
 | 🚀 URL         | **https://codechella2023.vercel.app/** |
 | 🔥 Desafio     | [**Design no Figma**](https://www.figma.com/file/xHLPBeA2ujaXbBjHMK9xh7/CodeChella-%7C-Challenge-I---Front-end-2023) |
 
@@ -79,13 +79,13 @@ _English version_
 
 Besides the challenge itself, I have chosen to develop both themes (_summer_ and _boreal_) instead of choosing only one. I have also chosen to dynamically feed the ticket's information with the data the user provides in the form on **Ingresso** page. These data are saved in the browser's _localStorage_ and allow the dynamic redirect to your ticket page, where the user can download her/his ticket.
 
-As an additional challenge, I intend to convert JavaScript to TypeScript in the next few days.
+As an additional challenge, I've converted all JavaScript to TypeScript in this application.
 
 The stack used in this challenge was:
 
 <div>
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+  <img src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
   <img src="https://img.shields.io/badge/styled components-3C3C3C?style=for-the-badge&logo=styled-components&logoColor=DB7093">
   <img src="https://img.shields.io/badge/react hook form / yup-081229?style=for-the-badge&logo=reacthookform&logoColor=EC5990">
   <img src="https://img.shields.io/badge/html2canvas-76ad3f?style=for-the-badge">
