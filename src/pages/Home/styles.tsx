@@ -2,6 +2,10 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { Button } from "components/Button/styles";
 
+interface Props {
+  to: string;
+}
+
 const Title = styled.h2`
   display: inline-block;
   font-family: var(--calistoga);
@@ -21,7 +25,7 @@ const Image = styled.img`
   width: 100%;
 `;
 
-const NewLink = styled(Button).attrs({ as: Link })`
+const NewLink = styled(Button).attrs({ as: Link }) <Props>`
   
 `;
 

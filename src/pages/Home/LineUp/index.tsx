@@ -1,6 +1,7 @@
+import { ILineUps } from 'shared/interfaces/ILineUps';
 import * as S from './styles';
 
-export const LineUp = ({ lineup }) => {
+export const LineUp = ({ lineup }: ILineUps) => {
   return (
     <S.LineUp>
       <h2>{lineup.date}</h2>

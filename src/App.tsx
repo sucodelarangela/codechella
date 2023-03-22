@@ -8,8 +8,8 @@ import { GlobalStyles } from "styles/globalStyles";
 import { BannerProvider } from "context/BannerContext";
 
 function App() {
-  const [theme, setTheme] = useState(JSON.parse(localStorage.getItem('theme')));
-  const [user, setUser] = useState(JSON.parse(localStorage.getItem('buyer')));
+  const [theme, setTheme] = useState(JSON.parse(localStorage.getItem('theme')!));
+  const [user, setUser] = useState(JSON.parse(localStorage.getItem('buyer')!));
 
   return (
     <ThemeProvider theme={theme ? boreal : summer}>
@@ -22,7 +22,7 @@ function App() {
             <Route path='/experience' element={<Experience />} />
             <Route path='/sectors' element={<Sectors />} />
             <Route path='/information' element={<GeneralInfo />} />
-            <Route path='/tickets' element={!user ? <BuyTickets setUser={setUser} /> : <Navigate to='/your-ticket' />} />
+            <Route path='/tickets' element={!user ? <BuyTickets user={user} setUser={setUser} /> : <Navigate to='/your-ticket' />} />
             <Route path='/your-ticket' element={user ? <BuyTickets user={user} setUser={setUser} /> : <Navigate to='/tickets' />} />
           </Route>
           <Route path='*' element={<NotFound />} />

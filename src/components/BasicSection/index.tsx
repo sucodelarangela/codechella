@@ -6,8 +6,8 @@ interface BasicSectionProps {
   alt: string;
   title: string;
   text: string;
-  className: string;
-  children: ReactElement | string;
+  className?: string;
+  children?: ReactElement | string;
 }
 
 export const BasicSection = ({ src, alt, title, text, className, children }: BasicSectionProps) => {

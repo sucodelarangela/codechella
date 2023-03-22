@@ -24,7 +24,11 @@ const summerTheme = {
   alt2: 'Três amigas se divertindo em um show'
 };
 
-export const Home = ({ theme }) => {
+interface HomeProps {
+  theme: boolean;
+}
+
+export const Home = ({ theme }: HomeProps) => {
   const [img, setImg] = useState(borealTheme);
 
   useEffect(() => {

@@ -1,4 +1,6 @@
-export const boreal = {
+import { DefaultTheme } from "styled-components";
+
+export const boreal: DefaultTheme = {
   gradient: 'linear-gradient(180deg, #304968 0%, #36C1A0 52.6%, #4650BD 100%)',
   primaryGreen: '#008364',
   primaryBlue: '#4650BD',
@@ -13,7 +15,7 @@ export const boreal = {
   invert: '0%'
 };
 
-export const summer = {
+export const summer: DefaultTheme = {
   gradient: 'linear-gradient(180deg, #BFDAE6 0%, #FCF0DD 50%, #FACF9D 100%)',
   primaryGreen: '#DF9010',
   primaryBlue: '#2E7BA2',
